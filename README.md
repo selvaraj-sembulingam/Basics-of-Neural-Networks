@@ -110,6 +110,7 @@ Input (1x28x28)
 ---
 
 ## Parameters
+```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -136,7 +137,7 @@ Input size (MB): 0.00
 Forward/backward pass size (MB): 0.21
 Params size (MB): 0.03
 Estimated Total Size (MB): 0.24
-
+```
 ---
 
 ## ✅ Advantages of This Architecture
