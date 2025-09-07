@@ -109,6 +109,36 @@ Input (1x28x28)
 
 ---
 
+## Parameters
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1            [-1, 8, 26, 26]              72
+              ReLU-2            [-1, 8, 26, 26]               0
+            Conv2d-3            [-1, 8, 24, 24]             576
+              ReLU-4            [-1, 8, 24, 24]               0
+         MaxPool2d-5            [-1, 8, 12, 12]               0
+            Conv2d-6           [-1, 16, 10, 10]           1,152
+              ReLU-7           [-1, 16, 10, 10]               0
+            Conv2d-8             [-1, 16, 8, 8]           2,304
+              ReLU-9             [-1, 16, 8, 8]               0
+        MaxPool2d-10             [-1, 16, 4, 4]               0
+           Conv2d-11             [-1, 32, 2, 2]           4,608
+             ReLU-12             [-1, 32, 2, 2]               0
+           Conv2d-13             [-1, 10, 2, 2]             320
+AdaptiveAvgPool2d-14             [-1, 10, 1, 1]               0
+================================================================
+Total params: 9,032
+Trainable params: 9,032
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.21
+Params size (MB): 0.03
+Estimated Total Size (MB): 0.24
+
+---
+
 ## ✅ Advantages of This Architecture
 
 - **Fully Convolutional**: No dense layers, fewer parameters.
@@ -125,3 +155,7 @@ Input (1x28x28)
 - Use **padding=1** in conv layers to preserve spatial dimensions.
 - Add **data augmentation** to improve generalization.
 
+---
+
+## Outcome
+- Achieved a test accuracy of `97.47%` in the first epoch with `9,032` parameters
